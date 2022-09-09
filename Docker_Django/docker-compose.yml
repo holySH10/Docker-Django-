@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8100:8000"
+    depends_on:
+      - db
+
+# http://localhost:8100 でアクセスする
+# docker-compose up コマンドでサーバーを立ち上げた状態で、docker exec -it {起動しているコンテナ名} bashでコンテナに入る
+# 起動しているコンテナは docker ps で確認する
+# コンテナログイン後は、python3 manage.py startapp アプリ名でアプリ作成
