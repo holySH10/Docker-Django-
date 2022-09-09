@@ -1,5 +1,5 @@
 # Docker-Django-
-DockerfileとDocker Composeで簡単なブログサイトを作成
+DockerfileとDocker Composeで簡単なブログサイトを構築
 参照: https://docs.docker.jp/compose/django.html
 
 ◆大まかな手順（備忘録） ※アプリケーションのセッティングは割愛
