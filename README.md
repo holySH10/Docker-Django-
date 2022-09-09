@@ -23,3 +23,5 @@ DATABASES = {
 6.docker exec -it {起動中のコンテナの名前} bash コマンドでコンテナに入る
 7.code# python3 manage.py startapp {App名} コマンドでアプリケーションのディレクトリを作成
 8.code# exit コマンドで一旦コンテナから抜け、各py.ファイルを編集しアプリケーションを完成させる
+
+※完成後は http://localhost:8100 でアクセスする
